@@ -1,0 +1,5 @@
+# robots.txt for https://hafis.tech
+User-agent: *
+Allow: /
+
+Sitemap: https://hafis.tech/sitemap.xml
