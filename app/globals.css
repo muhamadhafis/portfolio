@@ -7,6 +7,14 @@
     font-style: normal;
     font-variation-settings: "GRAD" 0;
   }
+
+  .text-gradient-blue {
+    background: linear-gradient(to right, #00c6ff, #0072ff, #00c6ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 @theme {
