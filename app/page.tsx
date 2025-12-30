@@ -1,4 +1,5 @@
 import TypingText from './components/TypingText';
+import ScrollNavigation from './components/ScrollNavigation';
 
 // Constants
 const SITE_URL = 'https://hafis.tech';
@@ -43,7 +44,7 @@ const projects = [
 ];
 
 const experienceItems = [
-  { text: 'Built and maintained REST APIs and GraphQL endpoints using Express.js, serving thousands of daily requests.' },
+  { text: 'Built and maintained REST APIs and GraphQL endpoints using Express.js, serving hundreds of daily requests.' },
   { text: 'Designed business intelligence dashboards with PostgreSQL Views and Metabase, enabling data-driven decisions.' },
   { text: 'Automated business workflows using Camunda BPMN, reducing manual processes by 40%.' },
   { text: 'Collaborated directly with team leads across all divisions using Agile/Kanban methodology.' },
@@ -88,24 +89,31 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
+      {/* Scroll Navigation */}
+      <ScrollNavigation />
+
       <main className="font-google-sans">
         {/* Hero Section */}
         <section className="relative mx-auto min-h-screen flex flex-col items-center justify-center gap-12 px-6 overflow-hidden">
           <div className="text-2xl">
-            <h1 className="flex gap-x-2">
-              <span className="inline-block font-bold text-gradient-blue animate-shimmer animate-fade-up [animation-delay:400ms]">Muhamad</span>
-              <span className="inline-block font-bold text-gradient-blue animate-shimmer animate-fade-up [animation-delay:500ms]">Hafis</span>
-              <span className="inline-block animate-fade-up [animation-delay:600ms]">Febriano</span>
+            <h1 className="flex gap-x-1">
+              <div className="animate-fade-up [animation-delay:400ms] opacity-0">
+                <span className="inline-block font-bold text-gradient-blue animate-shimmer">Muhamad</span>
+              </div>
+              <div className="animate-fade-up [animation-delay:500ms] opacity-0">
+                <span className="inline-block font-bold text-gradient-blue animate-shimmer">Hafis</span>
+              </div>
+              <span className="inline-block animate-fade-up opacity-0 [animation-delay:600ms]">Febriano</span>
             </h1>
           </div>
           <div>
             <h2 className="flex flex-col items-center text-center">
-              <span className="text-5xl text-black-google animate-fade-up [animation-delay:500ms] font-semibold md:text-7xl">Helping businesses</span>
-              <span className="text-4xl text-gray-google animate-fade-up [animation-delay:500ms] md:text-6xl">with tech solutions</span>
+              <span className="text-5xl text-black-google animate-fade-up opacity-0 [animation-delay:500ms] font-semibold md:text-7xl">Helping businesses</span>
+              <span className="text-4xl text-gray-google animate-fade-up opacity-0 [animation-delay:500ms] md:text-6xl">with tech solutions</span>
             </h2>
           </div>
           <div>
-            <a href="#about" className="group flex text-lg bg-black-google items-center gap-2 px-6 py-2 rounded-full animate-fade-up [animation-delay:700ms] hover:bg-gray-800 transition-colors">
+            <a href="#about" className="group flex text-lg bg-black-google items-center gap-2 px-6 py-2 rounded-full animate-fade-up opacity-0 [animation-delay:700ms] hover:bg-gray-800 transition-colors">
               <span className="text-white">Get to know me</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="size-6 rotate-270 transition-transform duration-300 group-hover:rotate-315 group-active:rotate-315" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
@@ -121,6 +129,19 @@ export default function Home() {
               {/* Text Content */}
               <div className="flex-1">
                 <p className="text-gray-google text-sm font-medium tracking-widest mb-4 animate-fade-up">/ about me</p>
+
+                {/* Profile Image - Mobile/Tablet */}
+                <div className="lg:hidden flex justify-center mb-8">
+                  <div className="relative group">
+                    <div className="absolute -inset-2 bg-gradient-to-r rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                    <img
+                      src="https://imgur.com/SVQXuje.jpg"
+                      alt="Muhamad Hafis"
+                      className="relative w-48 h-48 md:w-56 md:h-56 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-500"
+                    />
+                  </div>
+                </div>
+
                 <h2 className="text-3xl md:text-4xl font-semibold text-black-google mb-6 leading-tight">
                   Hi there! I&apos;m a <span className="text-gradient-blue animate-shimmer">Backend Developer</span> who loves turning coffee into code.
                 </h2>
@@ -211,7 +232,7 @@ export default function Home() {
             <p className="text-gray-google text-sm font-medium tracking-widest mb-4">/ pet projects</p>
             <h2 className="text-3xl md:text-4xl font-semibold text-black-google mb-4">Things I&apos;ve Built</h2>
             <p className="text-gray-google text-lg mb-12 max-w-2xl">
-              A collection of projects I&apos;ve worked on during my learning journey. Some are prototypes, some are experiments, all are made with love (and caffeine).
+              A collection of projects I&apos;ve worked on during my learning journey. <span className='text-rose-600'>Some are prototypes, some are experiments,</span> all are made with love (and caffeine).
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -256,17 +277,17 @@ export default function Home() {
             <p className="text-gray-google text-sm font-medium tracking-widest mb-4">/ get in touch</p>
             <h2 className="text-4xl md:text-5xl font-semibold text-black-google mb-6">Let&apos;s Build Something Cool!</h2>
             <p className="text-gray-google text-lg mb-8 leading-relaxed">
-              I&apos;m currently looking for new internship opportunities where I can learn, grow, and contribute.
+              I&apos;m currently <span className='underline'>looking for new internship opportunities</span> where I can learn, grow, and contribute.
               Whether you have a question, a project idea, or just want to say hi — my inbox is always open!
             </p>
             <a
               href={TELEGRAM_URL}
               className="inline-flex items-center gap-2 bg-black-google text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-colors"
             >
-              Say Hello!
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-5" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+              <svg className="size-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
               </svg>
+              Say Hello!
             </a>
 
             {/* Social Media Links */}
