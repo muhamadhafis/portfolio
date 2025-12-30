@@ -85,15 +85,19 @@ export default function Home() {
       <main className="font-google-sans">
         <section className="max-w-lg min-h-screen flex flex-col items-center justify-center gap-12">
           <div className="text-2xl">
-            <h1 className="flex gap-2">
-              <span className="inline-block animate-fade-up [animation-delay:400ms]">Muhamad</span>
-              <span className="inline-block animate-fade-up [animation-delay:500ms]">Hafis</span>
+            <h1 className="flex gap-x-1">
+              <div className="inline-block animate-fade-up [animation-delay:400ms]">
+                <span className="inline-block [animation-delay:400ms] font-bold bg-[linear-gradient(to_right,#00c6ff,#0072ff,#00c6ff)] bg-[length:200%_auto] animate-shimmer bg-clip-text text-transparent">Muhamad</span>
+              </div>
+              <div className="inline-block animate-fade-up [animation-delay:500ms]">
+                <span className="inline-block [animation-delay:500ms] font-bold bg-[linear-gradient(to_right,#00c6ff,#0072ff,#00c6ff)] bg-[length:200%_auto] animate-shimmer bg-clip-text text-transparent">Hafis</span>
+              </div>
               <span className="inline-block animate-fade-up [animation-delay:600ms]">Febriano</span>
             </h1>
           </div>
           <div>
             <h2 className="flex flex-col items-center text-center">
-              <span className="text-5xl text-black-google animate-fade-up [animation-delay:500ms]">Helping businesses</span>
+              <span className="text-5xl text-black-google animate-fade-up [animation-delay:500ms] font-semibold">Helping businesses</span>
               <span className="text-4xl text-gray-google animate-fade-up [animation-delay:500ms]">with tech solutions</span>
             </h2>
           </div>
