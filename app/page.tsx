@@ -1,5 +1,6 @@
 import TypingText from './components/TypingText';
 import ScrollNavigation from './components/ScrollNavigation';
+import ProfileImage from './components/ProfileImage';
 
 // Constants
 const SITE_URL = 'https://hafis.tech';
@@ -84,6 +85,30 @@ const jsonLd = {
 export default function Home() {
   return (
     <>
+      {/* Animated Blur Background */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+        {/* Blue blob - top right */}
+        <div
+          className="absolute w-[200px] h-[200px] md:w-[500px] md:h-[500px] rounded-full bg-blue-500/30 blur-[60px] md:blur-[120px] animate-blob-1"
+          style={{ top: '5%', right: '-10%' }}
+        />
+        {/* Blue blob - middle left */}
+        <div
+          className="absolute w-[150px] h-[150px] md:w-[400px] md:h-[400px] rounded-full bg-cyan-400/25 blur-[50px] md:blur-[100px] animate-blob-2"
+          style={{ top: '40%', left: '-5%' }}
+        />
+        {/* Blue blob - bottom right */}
+        <div
+          className="absolute w-[120px] h-[120px] md:w-[350px] md:h-[350px] rounded-full bg-indigo-500/20 blur-[40px] md:blur-[80px] animate-blob-3"
+          style={{ top: '70%', right: '5%' }}
+        />
+        {/* Small accent blob - hidden on mobile */}
+        <div
+          className="hidden md:block absolute w-[200px] h-[200px] rounded-full bg-sky-400/30 blur-[60px] animate-blob-4"
+          style={{ top: '25%', left: '30%' }}
+        />
+      </div>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -134,10 +159,10 @@ export default function Home() {
                 <div className="lg:hidden flex justify-center mb-8">
                   <div className="relative group">
                     <div className="absolute -inset-2 bg-gradient-to-r rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-                    <img
+                    <ProfileImage
                       src="https://imgur.com/SVQXuje.jpg"
                       alt="Muhamad Hafis"
-                      className="relative w-48 h-48 md:w-56 md:h-56 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-500"
+                      className="relative w-48 h-48 md:w-56 md:h-56 object-cover rounded-xl"
                     />
                   </div>
                 </div>
@@ -175,10 +200,10 @@ export default function Home() {
               <div className="hidden lg:block flex-shrink-0">
                 <div className="relative group">
                   <div className="absolute -inset-2 bg-gradient-to-r rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-                  <img
+                  <ProfileImage
                     src="https://imgur.com/SVQXuje.jpg"
                     alt="Muhamad Hafis"
-                    className="relative w-64 h-64 object-cover rounded-xl grayscale hover:grayscale-0 transition duration-500"
+                    className="relative w-64 h-64 object-cover rounded-xl"
                   />
                 </div>
               </div>
@@ -187,7 +212,7 @@ export default function Home() {
         </section>
 
         {/* Slogan Section */}
-        <section className="py-16 px-6 bg-gray-50">
+        <section className="py-16 px-6 bg-white/50 backdrop-blur-sm">
           <div className="max-w-4xl mx-auto">
             <TypingText
               text="Solving business problems through strategic consulting and AI."
@@ -272,7 +297,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="pt-24 pb-60 px-6 bg-gray-50">
+        <section id="contact" className="px-6 bg-white/50 backdrop-blur-sm min-h-screen flex items-center">
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-gray-google text-sm font-medium tracking-widest mb-4">/ get in touch</p>
             <h2 className="text-4xl md:text-5xl font-semibold text-black-google mb-6">Let&apos;s Build Something Cool!</h2>
