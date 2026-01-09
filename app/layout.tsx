@@ -7,15 +7,21 @@ export const metadata: Metadata = {
     default: 'Muhamad Hafis | Building Scalable Solutions',
     template: '%s | Muhamad Hafis'
   },
-  description: 'Backend Developer with 10 months of intensive internship experience. Expertise in Node.js, Express.js, React, PostgreSQL, GraphQL, and Python. Building scalable APIs and business automation solutions.',
+  description: 'Muhamad Hafis (Hafis) - Backend Developer with 10 months of intensive internship experience. Expertise in Node.js, Express.js, React, PostgreSQL, GraphQL, and Python. Building scalable APIs and business automation solutions.',
   keywords: [
+    'Hafis',
     'Muhamad Hafis',
+    'Muhammad Hafis',
+    'Hafis Backend Developer',
+    'Hafis Developer',
+    'Hafis Tech',
+    'hafis.tech',
     'Backend Developer',
     'Fullstack Developer',
     'Node.js Developer',
     'Express.js Developer',
     'React Developer',
-    'PostgreSQL',
+    'PostgreSQL Developer',
     'GraphQL Developer',
     'JavaScript Developer',
     'TypeScript Developer',
@@ -24,8 +30,10 @@ export const metadata: Metadata = {
     'REST API',
     'Junior Developer Indonesia',
     'Backend Developer Indonesia',
-    'Software Engineer',
-    'Web Developer'
+    'Software Engineer Indonesia',
+    'Web Developer Indonesia',
+    'Hafis Programmer',
+    'Muhamad Hafis Portfolio'
   ],
   authors: [{ name: 'Muhamad Hafis', url: 'https://hafis.tech' }],
   creator: 'Muhamad Hafis',
@@ -39,9 +47,9 @@ export const metadata: Metadata = {
     type: 'profile',
     locale: 'en_US',
     url: 'https://hafis.tech',
-    siteName: 'Muhamad Hafis Portfolio',
-    title: 'Muhamad Hafis | Building Scalable Solutions',
-    description: 'Backend Developer with 10 months of experience. Expertise in Node.js, Express.js, React, PostgreSQL, GraphQL. Building scalable APIs and business automation.',
+    siteName: 'Hafis - Muhamad Hafis Portfolio',
+    title: 'Muhamad Hafis (Hafis) | Backend Developer - Building Scalable Solutions',
+    description: 'Hafis - Backend Developer with 10 months of experience. Expertise in Node.js, Express.js, React, PostgreSQL, GraphQL. Building scalable APIs and business automation.',
     images: [
       {
         url: '/og-image.png',
@@ -55,8 +63,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Muhamad Hafis - Backend Developer',
-    description: 'Backend Developer with 10 months of experience. Node.js, Express.js, React, PostgreSQL, GraphQL specialist.',
+    title: 'Muhamad Hafis (Hafis) - Backend Developer',
+    description: 'Hafis - Backend Developer with 10 months of experience. Node.js, Express.js, React, PostgreSQL, GraphQL specialist.',
     images: ['/og-image.png'],
     creator: '@muhamadhafis'
   },
@@ -102,8 +110,8 @@ export default function RootLayout({
     mainEntity: {
       '@type': 'Person',
       name: 'Muhamad Hafis',
-      alternateName: 'Hafis',
-      description: 'Backend Developer with 10 months of intensive internship experience. Expertise in Node.js, Express.js, React, PostgreSQL, GraphQL, and Python.',
+      alternateName: ['Hafis', 'Muhammad Hafis', 'Hafis Tech'],
+      description: 'Muhamad Hafis (Hafis) - Backend Developer with 10 months of intensive internship experience specializing in Node.js, Express.js, React, PostgreSQL, GraphQL, and Python. Building scalable APIs and business automation solutions.',
       image: 'https://hafis.tech/profile.jpg',
       url: 'https://hafis.tech',
       jobTitle: 'Backend Developer',
@@ -132,6 +140,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0072ff" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet" />
